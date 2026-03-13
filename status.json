@@ -1,11 +1,11 @@
 {
-  "status": "stopped",
-  "statusText": "Concluído — 1 enviados | 0 falhas",
+  "status": "running",
+  "statusText": "Iniciando — 651 leads encontrados",
   "dataProcessada": "11/03/2026",
-  "inicio": "16:40",
-  "fim": "16:40",
+  "inicio": "16:51",
+  "fim": "",
   "total": 651,
-  "nexus": 1,
+  "nexus": 0,
   "raio": 0,
   "falhas": 0,
   "ontemNexus": 449,
@@ -14,11 +14,5 @@
   "apiWebhook": true,
   "apiSheets": true,
   "apiForms": true,
-  "leads": [
-    {
-      "nome": "ANA FABIOLA DA CONCEICAO MONTEIRO",
-      "cpf": "092.468.914-57",
-      "equipe": "nexus"
-    }
-  ]
+  "leads": []
 }
