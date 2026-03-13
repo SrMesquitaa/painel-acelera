@@ -734,13 +734,13 @@
     .gauge-wrap {
       position: relative;
       width: 200px;
-      height: 110px;
+      height: 145px;
       margin: 12px auto 0;
     }
 
     .gauge-svg {
       width: 200px;
-      height: 110px;
+      height: 145px;
       overflow: visible;
     }
 
@@ -893,7 +893,7 @@
       <div class="gauge-card">
         <div class="section-title" style="margin-bottom:0">Enviado ontem · Nexus</div>
         <div class="gauge-wrap">
-          <svg class="gauge-svg" viewBox="0 0 200 110">
+          <svg class="gauge-svg" viewBox="0 0 200 145">
             <!-- ticks -->
             <g id="ticks-nexus"></g>
             <!-- trilha -->
@@ -928,10 +928,11 @@
             </g>
             <!-- valor central -->
             <text class="gauge-center-val" x="100" y="78" fill="#00e5ff" id="gauge-val-nexus">—</text>
-            <text class="gauge-label-sub" x="100" y="92">leads · ontem</text>
             <!-- min/max -->
-            <text class="gauge-min-max" x="16" y="110">0</text>
-            <text class="gauge-min-max" x="178" y="110" text-anchor="end" id="gauge-max-nexus-lbl">—</text>
+            <text class="gauge-min-max" x="16" y="118">0</text>
+            <text class="gauge-min-max" x="178" y="118" text-anchor="end" id="gauge-max-nexus-lbl">—</text>
+            <!-- label abaixo -->
+            <text class="gauge-label-sub" x="100" y="136">leads · ontem</text>
           </svg>
         </div>
       </div>
@@ -939,7 +940,7 @@
       <div class="gauge-card">
         <div class="section-title" style="margin-bottom:0">Enviado ontem · Raio</div>
         <div class="gauge-wrap">
-          <svg class="gauge-svg" viewBox="0 0 200 110">
+          <svg class="gauge-svg" viewBox="0 0 200 145">
             <g id="ticks-raio"></g>
             <path class="gauge-track" d="M 20 100 A 80 80 0 0 1 180 100" />
             <path class="gauge-fill" id="gauge-fill-raio" d="M 20 100 A 80 80 0 0 1 180 100"
@@ -967,9 +968,11 @@
               <circle cx="100" cy="100" r="3" fill="var(--bg)" />
             </g>
             <text class="gauge-center-val" x="100" y="78" fill="#ffb347" id="gauge-val-raio">—</text>
-            <text class="gauge-label-sub" x="100" y="92">leads · ontem</text>
-            <text class="gauge-min-max" x="16" y="110">0</text>
-            <text class="gauge-min-max" x="178" y="110" text-anchor="end" id="gauge-max-raio-lbl">—</text>
+            <!-- min/max -->
+            <text class="gauge-min-max" x="16" y="118">0</text>
+            <text class="gauge-min-max" x="178" y="118" text-anchor="end" id="gauge-max-raio-lbl">—</text>
+            <!-- label abaixo -->
+            <text class="gauge-label-sub" x="100" y="136">leads · ontem</text>
           </svg>
         </div>
       </div>
