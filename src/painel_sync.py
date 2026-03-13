@@ -2,6 +2,21 @@ import json, base64, requests, os, sys
 from datetime import datetime
 
 
+# ── URL DO WEBHOOK (para checar status) ─────────────────────
+URL_WEBHOOK_CHECK = (
+    "https://n8n.jetsalesbrasil.com/webhook/22f5b5ed-7e1f-4dc3-8a8d-e479629b7504"
+)
+
+
+def _checar_webhook() -> bool:
+    """Faz GET no webhook e retorna True se responder."""
+    try:
+        r = requests.get(URL_WEBHOOK_CHECK, timeout=5)
+        return True  # qualquer resposta HTTP = online
+    except Exception:
+        return False
+
+
 # ── CONFIGURAÇÕES DO GITHUB ──────────────────────────────────
 def _ler_token():
     try:
@@ -19,7 +34,7 @@ GITHUB_FILE = "status.json"
 
 
 class PainelSync:
-    def __init__(self, total: int, data_processada: str):
+    def __init__(self, total: int, data_processada: str, sheets_ok: bool = True):
         self.total = total
         self.data_processada = data_processada
         self.nexus = 0
@@ -30,6 +45,17 @@ class PainelSync:
         self.fim = ""
         self._turno = self._ler_turno()
         self._sha = self._get_sha()
+
+        # ── Status real dos serviços ──
+        print("[painel_sync] Verificando serviços...")
+        self._api_webhook = _checar_webhook()
+        self._api_sheets = (
+            sheets_ok  # vem do distribuidor (True se conectou na planilha)
+        )
+        self._api_forms = self._api_webhook  # mesmo endpoint do webhook
+        print(
+            f"[painel_sync] Webhook: {'OK' if self._api_webhook else 'OFFLINE'} | Sheets: {'OK' if self._api_sheets else 'OFFLINE'}"
+        )
 
     # ── USO PÚBLICO ─────────────────────────────────────────
 
@@ -48,6 +74,9 @@ class PainelSync:
                 self.raio += 1
         else:
             self.falhas += 1
+            # Se começou a dar falha, marca webhook como offline
+            self._api_webhook = False
+            self._api_forms = False
             equipe = "erro"
 
         self.leads.append({"nome": nome, "cpf": cpf, "equipe": equipe})
@@ -69,9 +98,9 @@ class PainelSync:
             "ontemNexus": 449,
             "ontemRaio": 449,
             "ontemMeta": 100,
-            "apiWebhook": True,
-            "apiSheets": True,
-            "apiForms": True,
+            "apiWebhook": self._api_webhook,
+            "apiSheets": self._api_sheets,
+            "apiForms": self._api_forms,
             "leads": self.leads,
         }
 

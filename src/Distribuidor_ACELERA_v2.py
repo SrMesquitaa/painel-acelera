@@ -252,6 +252,14 @@ def run_robo():
             logging.info(f"Total de linhas na planilha: {len(leads)}")
         except Exception as e:
             finalizar(f"Erro ao acessar a planilha:\n{e}", erro=True)
+            # Notifica painel que Sheets está offline
+            try:
+                painel_err = PainelSync(
+                    total=0, data_processada=data_exibir, sheets_ok=False
+                )
+                painel_err.atualizar("error", "Erro ao acessar Google Sheets")
+            except:
+                pass
             return
 
         status_api, _ = checar_api()
@@ -267,7 +275,10 @@ def run_robo():
                 leads_filtrados.append(linha)
 
         total_na_data = len(leads_filtrados)
-        painel = PainelSync(total=total_na_data, data_processada=data_exibir)
+        sheets_conectado = True  # chegou até aqui = planilha OK
+        painel = PainelSync(
+            total=total_na_data, data_processada=data_exibir, sheets_ok=sheets_conectado
+        )
         painel.atualizar("running", f"Iniciando — {total_na_data} leads encontrados")
         logging.info(f"Leads encontrados para {data_exibir}: {total_na_data}")
 
