@@ -1229,7 +1229,7 @@
 
     async function poll() {
       try {
-        const res = await fetch('status.json?t=' + Date.now());
+        const res = await fetch('https://raw.githubusercontent.com/SrMesquitaa/painel-acelera/main/status.json?t=' + Date.now());
         if (res.ok) { const data = await res.json(); window.updateStatus(data); }
       } catch (e) { }
     }
