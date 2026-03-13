@@ -1,0 +1,18 @@
+{
+  "status": "stopped",
+  "statusText": "Aguardando execução...",
+  "dataProcessada": "",
+  "inicio": "",
+  "fim": "",
+  "total": 0,
+  "nexus": 0,
+  "raio": 0,
+  "falhas": 0,
+  "ontemNexus": 0,
+  "ontemRaio": 0,
+  "ontemMeta": 100,
+  "apiWebhook": true,
+  "apiSheets": true,
+  "apiForms": true,
+  "leads": []
+}
