@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Distribuidor de Leads — Acelera </title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080c10;
+      --surface: #0d1117;
+      --border: #1a2332;
+      --accent: #00e5ff;
+      --accent2: #00ff88;
+      --danger: #ff4d6d;
+      --warn: #ffb347;
+      --text: #e2e8f0;
+      --muted: #4a5568;
+      --card: #0f1923;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Orbitron', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 0 50px rgba(0, 229, 255, 0.2);
+    }
+
+    .logo h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 400;
+      font-family: 'Exo 2', monospace;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Exo 2', monospace;
+      font-size: 11px;
+      color: var(--accent2);
+      letter-spacing: 1px;
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent2);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.8);
+      }
+    }
+
+    #last-update {
+      font-family: 'Exo 2', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .status-bar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .status-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .status-indicator.running {
+      background: var(--accent2);
+      animation: pulse 1.5s infinite;
+    }
+
+    .status-indicator.stopped {
+      background: var(--muted);
+    }
+
+    .status-indicator.error {
+      background: var(--danger);
+      animation: pulse 1s infinite;
+    }
+
+    .status-text {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .status-meta {
+      margin-left: auto;
+      font-family: 'Exo 2', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .kpi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .kpi-card:hover {
+      border-color: var(--accent);
+    }
+
+    .kpi-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--kpi-color, var(--accent));
+      opacity: 0.6;
+    }
+
+    .kpi-label {
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Exo 2', monospace;
+      margin-bottom: 8px;
+    }
+
+    .kpi-value {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--kpi-color, var(--text));
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .kpi-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+      font-family: 'Exo 2', monospace;
+    }
+
+    .progress-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-family: 'Exo 2', monospace;
+    }
+
+    .progress-bar-wrap {
+      background: var(--border);
+      border-radius: 999px;
+      height: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 0.5s ease;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Exo 2', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .progress-pct {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .api-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .api-row:last-child {
+      border-bottom: none;
+    }
+
+    .api-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .api-dot.ok {
+      background: var(--accent2);
+    }
+
+    .api-dot.err {
+      background: var(--danger);
+    }
+
+    .api-dot.warn {
+      background: var(--warn);
+    }
+
+    .api-name {
+      flex: 1;
+      color: var(--text);
+      font-family: 'Exo 2', sans-serif;
+      font-size: 13px;
+    }
+
+    .api-status {
+      font-family: 'Exo 2', monospace;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .api-status.ok {
+      background: rgba(0, 255, 136, 0.1);
+      color: var(--accent2);
+    }
+
+    .api-status.err {
+      background: rgba(255, 77, 109, 0.1);
+      color: var(--danger);
+    }
+
+    .api-status.warn {
+      background: rgba(255, 179, 71, 0.1);
+      color: var(--warn);
+    }
+
+    .leads-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .leads-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .filter-tab {
+      padding: 5px 14px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-family: 'Exo 2', monospace;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+      background: none;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .filter-tab.active {
+      background: rgba(0, 229, 255, 0.1);
+      border-color: rgba(0, 229, 255, 0.3);
+      color: var(--accent);
+    }
+
+    .filter-tab:hover:not(.active) {
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .leads-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .leads-table th {
+      padding: 10px 16px;
+      text-align: left;
+      font-family: 'Exo 2', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .leads-table td {
+      padding: 11px 16px;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(26, 35, 50, 0.6);
+      font-family: 'Exo 2', monospace;
+    }
+
+    .leads-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .leads-table tr {
+      transition: background 0.15s;
+    }
+
+    .leads-table tr:hover td {
+      background: rgba(0, 229, 255, 0.03);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .badge.nexus {
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--accent);
+    }
+
+    .badge.raio {
+      background: rgba(255, 179, 71, 0.1);
+      color: var(--warn);
+    }
+
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .chart-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .donut-wrap {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .donut-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-family: 'Exo 2', sans-serif;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .legend-val {
+      font-weight: 700;
+      font-family: 'Exo 2', monospace;
+    }
+
+    .mini-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 80px;
+      margin-top: 16px;
+    }
+
+    .mini-bar-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    .mini-bar {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      min-height: 4px;
+      transition: height 0.5s ease;
+    }
+
+    .mini-bar-label {
+      font-family: 'Exo 2', monospace;
+      font-size: 9px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .empty-state {
+      padding: 48px;
+      text-align: center;
+      color: var(--muted);
+      font-family: 'Exo 2', monospace;
+      font-size: 13px;
+    }
+
+    .table-scroll {
+      max-height: 340px;
+      overflow-y: auto;
+    }
+
+    .table-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .table-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .table-scroll::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .kpi-card,
+    .progress-section,
+    .leads-section,
+    .chart-card {
+      animation: fadeIn 0.4s ease both;
+    }
+
+    .kpi-card:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .kpi-card:nth-child(2) {
+      animation-delay: 0.10s;
+    }
+
+    .kpi-card:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    .kpi-card:nth-child(4) {
+      animation-delay: 0.20s;
+    }
+
+    /* Destaque nos cards centrais (Nexus e Raio) */
+    .kpi-card.featured-nexus {
+      border-color: rgba(0, 229, 255, 0.45);
+      background: linear-gradient(135deg, #0f1923 60%, rgba(0, 229, 255, 0.06) 100%);
+      box-shadow:
+        0 0 0 1px rgba(0, 229, 255, 0.15),
+        0 0 30px rgba(0, 229, 255, 0.18),
+        0 0 60px rgba(0, 229, 255, 0.08);
+    }
+
+    .kpi-card.featured-nexus::after {
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent);
+      opacity: 1;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.8);
+    }
+
+    .kpi-card.featured-nexus::before {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 60px;
+      background: radial-gradient(ellipse at center, rgba(0, 229, 255, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+      filter: blur(8px);
+      animation: smokeFloat 4s ease-in-out infinite;
+    }
+
+    .kpi-card.featured-raio {
+      border-color: rgba(255, 179, 71, 0.45);
+      background: linear-gradient(135deg, #0f1923 60%, rgba(255, 179, 71, 0.06) 100%);
+      box-shadow:
+        0 0 0 1px rgba(255, 179, 71, 0.15),
+        0 0 30px rgba(255, 179, 71, 0.18),
+        0 0 60px rgba(255, 179, 71, 0.08);
+    }
+
+    .kpi-card.featured-raio::after {
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--warn), #ffdd88, transparent);
+      opacity: 1;
+      box-shadow: 0 0 12px rgba(255, 179, 71, 0.8);
+    }
+
+    .kpi-card.featured-raio::before {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 60px;
+      background: radial-gradient(ellipse at center, rgba(255, 179, 71, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+      filter: blur(8px);
+      animation: smokeFloat 4s ease-in-out infinite 1s;
+    }
+
+    /* Fumaça animada dentro dos cards */
+    .card-smoke {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .card-smoke span {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      filter: blur(18px);
+      opacity: 0;
+      animation: smokeRise var(--dur, 6s) ease-in-out infinite var(--delay, 0s);
+    }
+
+    @keyframes smokeRise {
+      0% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.6);
+      }
+
+      30% {
+        opacity: 0.35;
+      }
+
+      70% {
+        opacity: 0.15;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-40%) scale(1.4);
+      }
+    }
+
+    @keyframes smokeFloat {
+
+      0%,
+      100% {
+        opacity: 0.7;
+        transform: translateX(-50%) scaleX(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateX(-50%) scaleX(1.15);
+      }
+    }
+
+    /* ── Velocímetro ── */
+    .gauge-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gauge-wrap {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      margin: 12px auto 0;
+    }
+
+    .gauge-svg {
+      width: 200px;
+      height: 110px;
+      overflow: visible;
+    }
+
+    .gauge-track {
+      fill: none;
+      stroke: var(--border);
+      stroke-width: 14;
+      stroke-linecap: round;
+    }
+
+    .gauge-fill {
+      fill: none;
+      stroke-width: 14;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1.2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .gauge-needle {
+      transform-origin: 100px 100px;
+      transition: transform 1.2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .gauge-center-val {
+      font-family: 'Orbitron', monospace;
+      font-size: 28px;
+      font-weight: 800;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .gauge-label-sub {
+      font-family: 'Exo 2', monospace;
+      font-size: 10px;
+      text-anchor: middle;
+      fill: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .gauge-tick {
+      stroke: var(--muted);
+      stroke-width: 1;
+      opacity: 0.4;
+    }
+
+    .gauge-min-max {
+      font-family: 'Exo 2', monospace;
+      font-size: 9px;
+      fill: var(--muted);
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes rowIn {
+      from {
+        opacity: 0;
+        background: rgba(0, 229, 255, 0.05);
+      }
+
+      to {
+        opacity: 1;
+        background: transparent;
+      }
+    }
+
+    .row-new {
+      animation: rowIn 0.6s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <h1>Distribuidor de Leads - Acelera</h1>
+          <span>Painel de monitoramento · Acelera</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="live-badge">
+          <div class="live-dot"></div>LIVE
+        </div>
+        <div id="last-update">Aguardando dados...</div>
+      </div>
+    </header>
+
+    <!-- STATUS BAR — alteração 1: mostra "Enviado hoje (dd/mm/aaaa), às HH:MM" -->
+    <div class="status-bar">
+      <div class="status-indicator" id="status-dot"></div>
+      <div class="status-text" id="status-text">Aguardando execução</div>
+      <div class="status-meta" id="status-meta">—</div>
+    </div>
+
+    <!-- KPI CARDS — alteração 2: novos labels -->
+    <div class="kpi-grid">
+      <div class="kpi-card" style="--kpi-color: var(--accent)">
+        <div class="kpi-label">Total de Leads</div>
+        <div class="kpi-value" id="kpi-total">—</div>
+        <div class="kpi-sub" id="kpi-data">—</div>
+      </div>
+      <div class="kpi-card featured-nexus" style="--kpi-color: var(--accent2)">
+        <div class="card-smoke">
+          <span
+            style="width:90px;height:90px;background:rgba(0,229,255,0.12);left:10%;bottom:0;--dur:5s;--delay:0s"></span>
+          <span
+            style="width:60px;height:60px;background:rgba(0,229,255,0.10);left:50%;bottom:0;--dur:7s;--delay:1.5s"></span>
+          <span
+            style="width:70px;height:70px;background:rgba(0,255,136,0.08);left:30%;bottom:0;--dur:6s;--delay:3s"></span>
+        </div>
+        <div class="kpi-label">Acelera Nexus — Total Leads</div>
+        <div class="kpi-value" id="kpi-nexus">—</div>
+        <div class="kpi-sub" id="kpi-nexus-sub">—</div>
+      </div>
+      <div class="kpi-card featured-raio" style="--kpi-color: var(--warn)">
+        <div class="card-smoke">
+          <span
+            style="width:90px;height:90px;background:rgba(255,179,71,0.12);left:10%;bottom:0;--dur:5.5s;--delay:0.5s"></span>
+          <span
+            style="width:60px;height:60px;background:rgba(255,179,71,0.10);left:55%;bottom:0;--dur:7s;--delay:2s"></span>
+          <span
+            style="width:75px;height:75px;background:rgba(255,220,100,0.07);left:25%;bottom:0;--dur:6.5s;--delay:3.5s"></span>
+        </div>
+        <div class="kpi-label">Acelera Raio — Total Leads</div>
+        <div class="kpi-value" id="kpi-raio">—</div>
+        <div class="kpi-sub" id="kpi-raio-sub">—</div>
+      </div>
+      <div class="kpi-card" style="--kpi-color: var(--danger)">
+        <div class="kpi-label">Falhas de Envio</div>
+        <div class="kpi-value" id="kpi-fail">—</div>
+        <div class="kpi-sub" id="kpi-fail-pct">—</div>
+      </div>
+    </div>
+
+    <div class="progress-section">
+      <div class="section-title">Progresso da execução</div>
+      <div class="progress-pct" id="progress-pct">0%</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progress-bar" style="width: 0%"></div>
+      </div>
+      <div class="progress-labels">
+        <span id="prog-sent">0 processados</span>
+        <span id="prog-total">0 total</span>
+      </div>
+    </div>
+
+    <!-- CHARTS — velocímetros Nexus e Raio -->
+    <div class="charts-grid">
+      <div class="gauge-card">
+        <div class="section-title" style="margin-bottom:0">Enviado ontem · Nexus</div>
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="0 0 200 110">
+            <!-- ticks -->
+            <g id="ticks-nexus"></g>
+            <!-- trilha -->
+            <path class="gauge-track" d="M 20 100 A 80 80 0 0 1 180 100" />
+            <!-- preenchimento -->
+            <path class="gauge-fill" id="gauge-fill-nexus" d="M 20 100 A 80 80 0 0 1 180 100"
+              stroke="url(#gaugeGradNexus)" style="stroke-dasharray:251;stroke-dashoffset:251" />
+            <!-- gradiente -->
+            <defs>
+              <linearGradient id="gaugeGradNexus" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.5" />
+                <stop offset="100%" stop-color="#00ff88" />
+              </linearGradient>
+              <filter id="glowNexus">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- brilho por cima -->
+            <path class="gauge-fill" id="gauge-glow-nexus" d="M 20 100 A 80 80 0 0 1 180 100" stroke="#00e5ff"
+              stroke-width="3" stroke-linecap="round" opacity="0.5" filter="url(#glowNexus)"
+              style="stroke-dasharray:251;stroke-dashoffset:251;transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)" />
+            <!-- agulha -->
+            <g class="gauge-needle" id="needle-nexus" style="transform:rotate(-90deg)">
+              <line x1="100" y1="100" x2="100" y2="24" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"
+                opacity="0.9" />
+              <circle cx="100" cy="100" r="5" fill="#00e5ff" opacity="0.9" />
+              <circle cx="100" cy="100" r="3" fill="var(--bg)" />
+            </g>
+            <!-- valor central -->
+            <text class="gauge-center-val" x="100" y="78" fill="#00e5ff" id="gauge-val-nexus">—</text>
+            <text class="gauge-label-sub" x="100" y="92">leads · ontem</text>
+            <!-- min/max -->
+            <text class="gauge-min-max" x="16" y="110">0</text>
+            <text class="gauge-min-max" x="178" y="110" text-anchor="end" id="gauge-max-nexus-lbl">—</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="gauge-card">
+        <div class="section-title" style="margin-bottom:0">Enviado ontem · Raio</div>
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="0 0 200 110">
+            <g id="ticks-raio"></g>
+            <path class="gauge-track" d="M 20 100 A 80 80 0 0 1 180 100" />
+            <path class="gauge-fill" id="gauge-fill-raio" d="M 20 100 A 80 80 0 0 1 180 100"
+              stroke="url(#gaugeGradRaio)" style="stroke-dasharray:251;stroke-dashoffset:251" />
+            <defs>
+              <linearGradient id="gaugeGradRaio" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ffb347" stop-opacity="0.5" />
+                <stop offset="100%" stop-color="#ffdd88" />
+              </linearGradient>
+              <filter id="glowRaio">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path class="gauge-fill" id="gauge-glow-raio" d="M 20 100 A 80 80 0 0 1 180 100" stroke="#ffb347"
+              stroke-width="3" stroke-linecap="round" opacity="0.5" filter="url(#glowRaio)"
+              style="stroke-dasharray:251;stroke-dashoffset:251;transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)" />
+            <g class="gauge-needle" id="needle-raio" style="transform:rotate(-90deg)">
+              <line x1="100" y1="100" x2="100" y2="24" stroke="#ffb347" stroke-width="2" stroke-linecap="round"
+                opacity="0.9" />
+              <circle cx="100" cy="100" r="5" fill="#ffb347" opacity="0.9" />
+              <circle cx="100" cy="100" r="3" fill="var(--bg)" />
+            </g>
+            <text class="gauge-center-val" x="100" y="78" fill="#ffb347" id="gauge-val-raio">—</text>
+            <text class="gauge-label-sub" x="100" y="92">leads · ontem</text>
+            <text class="gauge-min-max" x="16" y="110">0</text>
+            <text class="gauge-min-max" x="178" y="110" text-anchor="end" id="gauge-max-raio-lbl">—</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-card" style="margin-bottom: 28px;">
+      <div class="section-title">Status dos serviços</div>
+      <div class="api-row">
+        <div class="api-dot warn" id="api-webhook-dot"></div>
+        <div class="api-name">Webhook N8N / Jetsales</div>
+        <div class="api-status warn" id="api-webhook-status">— Verificando</div>
+      </div>
+      <div class="api-row">
+        <div class="api-dot warn" id="api-sheets-dot"></div>
+        <div class="api-name">Google Sheets</div>
+        <div class="api-status warn" id="api-sheets-status">— Verificando</div>
+      </div>
+      <div class="api-row">
+        <div class="api-dot warn" id="api-forms-dot"></div>
+        <div class="api-name">Forms</div>
+        <div class="api-status warn" id="api-forms-status">— Verificando</div>
+      </div>
+    </div>
+
+    <!-- TABELA DE LEADS — alteração 4: colunas nome+cpf, filtros Nexus/Raio -->
+    <div class="leads-section">
+      <div class="leads-header">
+        <div class="section-title" style="margin-bottom:0">Leads enviados</div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" onclick="filterLeads('all', this)">Todos</button>
+          <button class="filter-tab" onclick="filterLeads('nexus', this)">⚡ Nexus</button>
+          <button class="filter-tab" onclick="filterLeads('raio', this)">🔥 Raio</button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>CPF</th>
+              <th>Equipe</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody">
+            <tr>
+              <td colspan="4" class="empty-state">Nenhum lead enviado ainda</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let state = {
+      status: 'stopped',
+      statusText: 'Aguardando execução',
+      dataProcessada: '—',
+      inicio: null, fim: null,
+      total: 0, nexus: 0, raio: 0, falhas: 0,
+      ontemNexus: 0, ontemRaio: 0, ontemMeta: 100,
+      apiWebhook: null, apiSheets: null, apiForms: null,
+      leads: [], historico: []
+    };
+
+    // Formata a data atual como dd/mm/aaaa
+    function dataHoje() {
+      const d = new Date();
+      const dd = String(d.getDate()).padStart(2, '0');
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const aaaa = d.getFullYear();
+      return `${dd}/${mm}/${aaaa}`;
+    }
+
+    function render() {
+      document.getElementById('last-update').textContent = 'Atualizado às ' + new Date().toLocaleTimeString('pt-BR');
+
+      const dot = document.getElementById('status-dot');
+
+      // Alteração 1: status bar mostra "Enviado hoje (dd/mm/aaaa), às HH:MM"
+      if (state.status === 'running' || state.status === 'stopped') {
+        const hora = state.inicio || new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+        dot.className = 'status-indicator ' + state.status;
+        document.getElementById('status-text').textContent =
+          `Enviado hoje (${dataHoje()}), às ${hora}`;
+      } else {
+        dot.className = 'status-indicator ' + state.status;
+        document.getElementById('status-text').textContent = state.statusText;
+      }
+
+      document.getElementById('status-meta').textContent = state.fim ? 'Concluído às ' + state.fim : '—';
+
+      // KPIs — alteração 2
+      const total = state.nexus + state.raio;
+      document.getElementById('kpi-total').textContent = total || '—';
+      document.getElementById('kpi-data').textContent = state.dataProcessada;
+
+      document.getElementById('kpi-nexus').textContent = state.nexus || '—';
+      document.getElementById('kpi-nexus-sub').textContent = total > 0
+        ? Math.round((state.nexus / total) * 100) + '% do total' : '—';
+
+      document.getElementById('kpi-raio').textContent = state.raio || '—';
+      document.getElementById('kpi-raio-sub').textContent = total > 0
+        ? Math.round((state.raio / total) * 100) + '% do total' : '—';
+
+      document.getElementById('kpi-fail').textContent = state.falhas || '—';
+      document.getElementById('kpi-fail-pct').textContent = total > 0
+        ? Math.round((state.falhas / (total + state.falhas)) * 100) + '% do total' : '—';
+
+      // Progresso
+      const prog = total > 0 ? Math.round(((total) / state.total) * 100) : 0;
+      document.getElementById('progress-pct').textContent = prog + '%';
+      document.getElementById('progress-bar').style.width = prog + '%';
+      document.getElementById('prog-sent').textContent = total + ' processados';
+      document.getElementById('prog-total').textContent = (state.total || 0) + ' total';
+
+      // Gauges — Nexus e Raio (ontem)
+      renderGauge('nexus', state.ontemNexus || 0, state.ontemMeta || 100);
+      renderGauge('raio', state.ontemRaio || 0, state.ontemMeta || 100);
+
+      renderApi('api-webhook', state.apiWebhook);
+      renderApi('api-sheets', state.apiSheets);
+      renderApi('api-forms', state.apiForms);
+      renderLeads(currentFilter);
+      renderHistoryBars();
+    }
+
+    // ── Velocímetro ──────────────────────────────────────────────
+    // O arco do gauge vai de 180° (esquerda) até 0° (direita) = 180° de varredura
+    // stroke-dasharray total do path semicircular ≈ 251 (π × r, r=80)
+    const GAUGE_LEN = 251;
+
+    function renderGauge(id, value, max) {
+      max = max || 100;
+      const pct = Math.min(value / max, 1);
+      const offset = GAUGE_LEN - pct * GAUGE_LEN;
+
+      // Preenchimento
+      const fill = document.getElementById('gauge-fill-' + id);
+      if (fill) fill.style.strokeDashoffset = offset;
+
+      // Brilho sobreposto
+      const glow = document.getElementById('gauge-glow-' + id);
+      if (glow) glow.style.strokeDashoffset = offset;
+
+      // Agulha: varia de -90° (zero) a +90° (máximo)
+      const angle = -90 + pct * 180;
+      const needle = document.getElementById('needle-' + id);
+      if (needle) needle.style.transform = `rotate(${angle}deg)`;
+
+      // Valor central
+      const valEl = document.getElementById('gauge-val-' + id);
+      if (valEl) valEl.textContent = value > 0 ? value : '—';
+
+      // Rótulo máximo
+      const maxLbl = document.getElementById('gauge-max-' + id + '-lbl');
+      if (maxLbl) maxLbl.textContent = max;
+    }
+
+    // Inicializa ticks dos gauges (chamado 1x)
+    function initGaugeTicks(id) {
+      const g = document.getElementById('ticks-' + id);
+      if (!g || g.children.length) return;
+      const cx = 100, cy = 100, r = 80;
+      for (let i = 0; i <= 10; i++) {
+        const a = Math.PI - (i / 10) * Math.PI; // de 180° a 0°
+        const x1 = cx + r * Math.cos(a);
+        const y1 = cy - r * Math.sin(a);
+        const x2 = cx + (r - (i % 5 === 0 ? 10 : 6)) * Math.cos(a);
+        const y2 = cy - (r - (i % 5 === 0 ? 10 : 6)) * Math.sin(a);
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+        line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+        line.setAttribute('class', 'gauge-tick');
+        if (i % 5 === 0) line.style.opacity = '0.7';
+        g.appendChild(line);
+      }
+    }
+
+    function renderApi(id, val) {
+      const dot = document.getElementById(id + '-dot');
+      const status = document.getElementById(id + '-status');
+      if (val === true) {
+        dot.className = 'api-dot ok'; status.className = 'api-status ok'; status.textContent = '✅ Online';
+      } else if (val === false) {
+        dot.className = 'api-dot err'; status.className = 'api-status err'; status.textContent = '❌ Offline';
+      } else {
+        dot.className = 'api-dot warn'; status.className = 'api-status warn'; status.textContent = '— Verificando';
+      }
+    }
+
+    let currentFilter = 'all';
+    function filterLeads(f, btn) {
+      currentFilter = f;
+      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderLeads(f);
+    }
+
+    // Alteração 4: tabela só com nome e cpf, filtro por equipe
+    function renderLeads(filter) {
+      const tbody = document.getElementById('leads-tbody');
+      let list = state.leads;
+      if (filter === 'nexus') list = list.filter(l => l.equipe === 'nexus');
+      if (filter === 'raio') list = list.filter(l => l.equipe === 'raio');
+      if (list.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="empty-state">Nenhum registro encontrado</td></tr>';
+        return;
+      }
+      tbody.innerHTML = list.slice().reverse().map((l, i) => `
+        <tr class="${l.isNew ? 'row-new' : ''}">
+          <td style="color:var(--muted)">${list.length - i}</td>
+          <td>${l.nome}</td>
+          <td style="color:var(--accent);font-size:12px">${l.cpf}</td>
+          <td>
+            <span class="badge ${l.equipe === 'nexus' ? 'nexus' : 'raio'}">
+              ${l.equipe === 'nexus' ? '⚡ Nexus' : '🔥 Raio'}
+            </span>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function renderHistoryBars() {
+      const wrap = document.getElementById('history-bars');
+      if (!state.historico.length) {
+        wrap.innerHTML = '<div style="color:var(--muted);font-family:Exo 2,monospace;font-size:11px;padding:20px 0">Sem histórico ainda</div>';
+        return;
+      }
+      const maxTotal = Math.max(...state.historico.map(h => h.total), 1);
+      wrap.innerHTML = state.historico.map(h => {
+        const hPct = Math.round((h.enviados / h.total) * 100);
+        const hH = Math.round((h.total / maxTotal) * 100);
+        return `<div class="mini-bar-wrap">
+          <div style="font-family:'Exo 2',monospace;font-size:9px;color:var(--warn)">${hPct}%</div>
+          <div class="mini-bar" style="height:${hH}%;background:linear-gradient(180deg,var(--warn),var(--accent))"></div>
+          <div class="mini-bar-label">${h.data}</div>
+        </div>`;
+      }).join('');
+    }
+
+    window.updateStatus = function (data) {
+      Object.assign(state, data);
+      render();
+    };
+
+    window.addLead = function (lead) {
+      lead.isNew = true;
+      state.leads.push(lead);
+      // Atualiza contadores
+      if (lead.equipe === 'nexus') state.nexus++;
+      else if (lead.equipe === 'raio') state.raio++;
+      setTimeout(() => { lead.isNew = false; }, 1000);
+      render();
+    };
+
+    async function poll() {
+      try {
+        const res = await fetch('status.json?t=' + Date.now());
+        if (res.ok) { const data = await res.json(); window.updateStatus(data); }
+      } catch (e) { }
+    }
+
+    setInterval(poll, 3000);
+    poll();
+    initGaugeTicks('nexus');
+    initGaugeTicks('raio');
+    render();
+  </script>
+</body>
+
+</html>

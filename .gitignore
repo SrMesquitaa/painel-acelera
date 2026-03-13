@@ -1,0 +1,43 @@
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pastas de compilação (PyInstaller)
+dist/
+build/
+*.spec
+
+# Playwright e Navegadores
+.local-browsers/
+ms-playwright/
+
+# Credenciais e token
+config/credentials.json
+config/token.txt
+
+# Arquivos temporários
+.ultimo_turno
