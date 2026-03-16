@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 8/596",
+  "statusText": "Enviando... 9/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 4,
+  "nexus": 5,
   "raio": 4,
   "falhas": 0,
   "ontemNexus": 449,
@@ -54,6 +54,11 @@
       "nome": "Erica",
       "cpf": "075.603.555-44",
       "equipe": "raio"
+    },
+    {
+      "nome": "Vinicius",
+      "cpf": "050.047.391-96",
+      "equipe": "nexus"
     }
   ]
 }
