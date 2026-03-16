@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 38/596",
+  "statusText": "Enviando... 39/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 19,
+  "nexus": 20,
   "raio": 19,
   "falhas": 0,
   "ontemNexus": 449,
@@ -204,6 +204,11 @@
       "nome": "Juliana Paiva",
       "cpf": "428.745.498-78",
       "equipe": "raio"
+    },
+    {
+      "nome": "Nathálya Vitória Fernandes Sales",
+      "cpf": "144.467.884-18",
+      "equipe": "nexus"
     }
   ]
 }
