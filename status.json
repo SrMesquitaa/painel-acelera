@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 18/596",
+  "statusText": "Enviando... 19/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 9,
+  "nexus": 10,
   "raio": 9,
   "falhas": 0,
   "ontemNexus": 449,
@@ -104,6 +104,11 @@
       "nome": "Maria Amelia Nogueira",
       "cpf": "179.581.548-52",
       "equipe": "raio"
+    },
+    {
+      "nome": "Lucione de Lima Freitas",
+      "cpf": "216.848.123-72",
+      "equipe": "nexus"
     }
   ]
 }
