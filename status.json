@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 46/594",
+  "statusText": "Enviando... 47/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 23,
-  "raio": 23,
+  "raio": 24,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -244,6 +244,11 @@
       "nome": "Ana Julia Sampaio",
       "cpf": "055.853.573-95",
       "equipe": "nexus"
+    },
+    {
+      "nome": "andressa",
+      "cpf": "037.816.089-30",
+      "equipe": "raio"
     }
   ]
 }
