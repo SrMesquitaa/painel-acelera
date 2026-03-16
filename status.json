@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 60/596",
+  "statusText": "Enviando... 61/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 30,
+  "nexus": 31,
   "raio": 30,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "CARLOS DOS SANTOS",
-      "cpf": "395.127.828-55",
-      "equipe": "nexus"
-    },
     {
       "nome": "Andressa Souza",
       "cpf": "044.705.211-08",
@@ -264,6 +259,11 @@
       "nome": "Elaine Cristina",
       "cpf": "037.013.907-03",
       "equipe": "raio"
+    },
+    {
+      "nome": "DEUEL Lourenço",
+      "cpf": "035.846.681-40",
+      "equipe": "nexus"
     }
   ]
 }
