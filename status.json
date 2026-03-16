@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 47/596",
+  "statusText": "Enviando... 48/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 24,
-  "raio": 23,
+  "raio": 24,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -249,6 +249,11 @@
       "nome": "Lara Maria Santos Salvador",
       "cpf": "861.500.865-50",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Ruane",
+      "cpf": "093.703.009-02",
+      "equipe": "raio"
     }
   ]
 }
