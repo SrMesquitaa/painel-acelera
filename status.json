@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 40/596",
+  "statusText": "Enviando... 41/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 20,
+  "nexus": 21,
   "raio": 20,
   "falhas": 0,
   "ontemNexus": 449,
@@ -214,6 +214,11 @@
       "nome": "Lucivania Garcia",
       "cpf": "422.526.523-49",
       "equipe": "raio"
+    },
+    {
+      "nome": "Andressa",
+      "cpf": "114.329.955-88",
+      "equipe": "nexus"
     }
   ]
 }
