@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 21/594",
+  "statusText": "Enviando... 22/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 10,
+  "nexus": 11,
   "raio": 11,
   "falhas": 0,
   "ontemNexus": 449,
@@ -119,6 +119,11 @@
       "nome": "Paulo Ricardo",
       "cpf": "027.173.033-16",
       "equipe": "raio"
+    },
+    {
+      "nome": "INGRID NUNES DA SILVA",
+      "cpf": "398.224.028-05",
+      "equipe": "nexus"
     }
   ]
 }
