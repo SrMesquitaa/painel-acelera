@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 22/596",
+  "statusText": "Enviando... 23/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 11,
+  "nexus": 12,
   "raio": 11,
   "falhas": 0,
   "ontemNexus": 449,
@@ -124,6 +124,11 @@
       "nome": "Elisangela santos de souza",
       "cpf": "064.456.992-19",
       "equipe": "raio"
+    },
+    {
+      "nome": "Erisson Conceição Lima",
+      "cpf": "850.815.745-20",
+      "equipe": "nexus"
     }
   ]
 }
