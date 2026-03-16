@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 10/594",
+  "statusText": "Enviando... 11/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 5,
-  "raio": 5,
+  "raio": 6,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -64,6 +64,11 @@
       "nome": "Julia",
       "cpf": "103.948.464-60",
       "equipe": "nexus"
+    },
+    {
+      "nome": "ANA MARIA PEDROSO",
+      "cpf": "112.419.958-69",
+      "equipe": "raio"
     }
   ]
 }
