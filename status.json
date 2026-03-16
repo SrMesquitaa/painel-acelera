@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 3/596",
+  "statusText": "Enviando... 4/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 2,
-  "raio": 1,
+  "raio": 2,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -29,6 +29,11 @@
       "nome": "FABIO",
       "cpf": "095.881.236-58",
       "equipe": "nexus"
+    },
+    {
+      "nome": "TIAGO PEREIRA DA COSTA RAMOS",
+      "cpf": "086.408.275-40",
+      "equipe": "raio"
     }
   ]
 }
