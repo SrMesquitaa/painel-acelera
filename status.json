@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 14/596",
+  "statusText": "Enviando... 15/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 7,
+  "nexus": 8,
   "raio": 7,
   "falhas": 0,
   "ontemNexus": 449,
@@ -84,6 +84,11 @@
       "nome": "Fabio Rodrigues Gonçalves",
       "cpf": "025.790.512-01",
       "equipe": "raio"
+    },
+    {
+      "nome": "jeferson sales silva",
+      "cpf": "413.087.458-69",
+      "equipe": "nexus"
     }
   ]
 }
