@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 50/594",
+  "statusText": "Enviando... 51/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 25,
-  "raio": 25,
+  "raio": 26,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Rodrigo",
-      "cpf": "187.099.017-01",
-      "equipe": "raio"
-    },
     {
       "nome": "Hallison Holanda",
       "cpf": "658.656.933-87",
@@ -264,6 +259,11 @@
       "nome": "Amanda",
       "cpf": "324.821.568-23",
       "equipe": "nexus"
+    },
+    {
+      "nome": "REGINALDO PEREIRA MIGUEL",
+      "cpf": "573.177.556-72",
+      "equipe": "raio"
     }
   ]
 }
