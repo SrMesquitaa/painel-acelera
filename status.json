@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 61/594",
+  "statusText": "Enviando... 62/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 30,
+  "nexus": 31,
   "raio": 31,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "julia maria barbosa brito lima",
-      "cpf": "024.112.401-80",
-      "equipe": "nexus"
-    },
     {
       "nome": "Helena",
       "cpf": "441.717.678-73",
@@ -264,6 +259,11 @@
       "nome": "Roseane cutrim Everton",
       "cpf": "736.565.503-87",
       "equipe": "raio"
+    },
+    {
+      "nome": "Michelle",
+      "cpf": "454.763.318-59",
+      "equipe": "nexus"
     }
   ]
 }
