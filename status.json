@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 46/596",
+  "statusText": "Enviando... 47/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 23,
+  "nexus": 24,
   "raio": 23,
   "falhas": 0,
   "ontemNexus": 449,
@@ -244,6 +244,11 @@
       "nome": "JAKSON DOUGLAS DE ANTUNES COSTA",
       "cpf": "462.943.252-34",
       "equipe": "raio"
+    },
+    {
+      "nome": "Lara Maria Santos Salvador",
+      "cpf": "861.500.865-50",
+      "equipe": "nexus"
     }
   ]
 }
