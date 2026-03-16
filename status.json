@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 58/596",
+  "statusText": "Enviando... 59/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 29,
+  "nexus": 30,
   "raio": 29,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Vinicius",
-      "cpf": "050.047.391-96",
-      "equipe": "nexus"
-    },
     {
       "nome": "Ana cristina ferreira da conceicao",
       "cpf": "051.255.361-05",
@@ -264,6 +259,11 @@
       "nome": "Ludmilla",
       "cpf": "706.680.951-30",
       "equipe": "raio"
+    },
+    {
+      "nome": "Leticia",
+      "cpf": "079.363.231-55",
+      "equipe": "nexus"
     }
   ]
 }
