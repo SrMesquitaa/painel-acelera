@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 8/594",
+  "statusText": "Enviando... 9/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 4,
-  "raio": 4,
+  "raio": 5,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -54,6 +54,11 @@
       "nome": "LUCAS",
       "cpf": "134.497.714-69",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Lindelmira",
+      "cpf": "454.622.322-68",
+      "equipe": "raio"
     }
   ]
 }
