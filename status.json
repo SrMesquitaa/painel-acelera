@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 30/596",
+  "statusText": "Enviando... 31/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 15,
+  "nexus": 16,
   "raio": 15,
   "falhas": 0,
   "ontemNexus": 449,
@@ -164,6 +164,11 @@
       "nome": "Rosany Catarina Gobeth Moyses",
       "cpf": "416.236.308-00",
       "equipe": "raio"
+    },
+    {
+      "nome": "ANA CLAUDIA DE AQUINO LOPES",
+      "cpf": "062.192.441-50",
+      "equipe": "nexus"
     }
   ]
 }
