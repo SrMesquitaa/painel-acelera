@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 33/594",
+  "statusText": "Enviando... 34/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 16,
+  "nexus": 17,
   "raio": 17,
   "falhas": 0,
   "ontemNexus": 449,
@@ -179,6 +179,11 @@
       "nome": "Vitória raissa Santos Vieira",
       "cpf": "116.273.553-83",
       "equipe": "raio"
+    },
+    {
+      "nome": "Lucivalda Maura Brito",
+      "cpf": "251.407.418-57",
+      "equipe": "nexus"
     }
   ]
 }
