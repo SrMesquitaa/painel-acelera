@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 11/594",
+  "statusText": "Enviando... 12/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 5,
+  "nexus": 6,
   "raio": 6,
   "falhas": 0,
   "ontemNexus": 449,
@@ -69,6 +69,11 @@
       "nome": "ANA MARIA PEDROSO",
       "cpf": "112.419.958-69",
       "equipe": "raio"
+    },
+    {
+      "nome": "julia maria barbosa brito lima",
+      "cpf": "024.112.401-80",
+      "equipe": "nexus"
     }
   ]
 }
