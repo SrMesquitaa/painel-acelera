@@ -1,9 +1,9 @@
 {
-  "status": "running",
-  "statusText": "Iniciando — 1191 leads encontrados",
+  "status": "stopped",
+  "statusText": "Concluído — 0 enviados | 0 falhas",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:21",
-  "fim": "",
+  "fim": "09:21",
   "total": 1191,
   "nexus": 0,
   "raio": 0,
