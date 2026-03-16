@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 31/594",
+  "statusText": "Enviando... 32/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 15,
+  "nexus": 16,
   "raio": 16,
   "falhas": 0,
   "ontemNexus": 449,
@@ -169,6 +169,11 @@
       "nome": "Renato de oliveira bellagamba",
       "cpf": "312.414.918-10",
       "equipe": "raio"
+    },
+    {
+      "nome": "62 99810-5777",
+      "cpf": "044.594.471-42",
+      "equipe": "nexus"
     }
   ]
 }
