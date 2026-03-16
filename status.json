@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 33/596",
+  "statusText": "Enviando... 34/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 17,
-  "raio": 16,
+  "raio": 17,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -179,6 +179,11 @@
       "nome": "Carla Priscila Pires Toquya",
       "cpf": "183.552.148-70",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Sayra",
+      "cpf": "074.173.423-02",
+      "equipe": "raio"
     }
   ]
 }
