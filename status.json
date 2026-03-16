@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Iniciando — 482 leads encontrados",
+  "statusText": "Enviando... 1/482",
   "dataProcessada": "13/03/2026",
   "inicio": "08:41",
   "fim": "",
   "total": 482,
-  "nexus": 0,
+  "nexus": 1,
   "raio": 0,
   "falhas": 0,
   "ontemNexus": 449,
@@ -14,5 +14,11 @@
   "apiWebhook": true,
   "apiSheets": true,
   "apiForms": true,
-  "leads": []
+  "leads": [
+    {
+      "nome": "Evelyn",
+      "cpf": "445.092.568-84",
+      "equipe": "nexus"
+    }
+  ]
 }
