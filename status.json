@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 54/594",
+  "statusText": "Enviando... 55/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 27,
-  "raio": 27,
+  "raio": 28,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Caio Vinicius Silva Nunes",
-      "cpf": "062.166.915-62",
-      "equipe": "raio"
-    },
     {
       "nome": "Leonardo",
       "cpf": "172.974.488-50",
@@ -264,6 +259,11 @@
       "nome": "Edson Toscano Barreto",
       "cpf": "006.214.628-96",
       "equipe": "nexus"
+    },
+    {
+      "nome": "priscila",
+      "cpf": "068.479.085-80",
+      "equipe": "raio"
     }
   ]
 }
