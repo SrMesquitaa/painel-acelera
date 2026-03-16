@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 44/596",
+  "statusText": "Enviando... 45/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 22,
+  "nexus": 23,
   "raio": 22,
   "falhas": 0,
   "ontemNexus": 449,
@@ -234,6 +234,11 @@
       "nome": "eduarda souza reimberg",
       "cpf": "490.470.768-00",
       "equipe": "raio"
+    },
+    {
+      "nome": "Teresinha",
+      "cpf": "357.201.128-04",
+      "equipe": "nexus"
     }
   ]
 }
