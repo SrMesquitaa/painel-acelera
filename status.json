@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 9/596",
+  "statusText": "Enviando... 10/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 5,
-  "raio": 4,
+  "raio": 5,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -59,6 +59,11 @@
       "nome": "Vinicius",
       "cpf": "050.047.391-96",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Ana cristina ferreira da conceicao",
+      "cpf": "051.255.361-05",
+      "equipe": "raio"
     }
   ]
 }
