@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 30/594",
+  "statusText": "Enviando... 31/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 15,
-  "raio": 15,
+  "raio": 16,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -164,6 +164,11 @@
       "nome": "Bryan",
       "cpf": "178.593.437-62",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Renato de oliveira bellagamba",
+      "cpf": "312.414.918-10",
+      "equipe": "raio"
     }
   ]
 }
