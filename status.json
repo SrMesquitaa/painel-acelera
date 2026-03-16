@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 45/594",
+  "statusText": "Enviando... 46/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 22,
+  "nexus": 23,
   "raio": 23,
   "falhas": 0,
   "ontemNexus": 449,
@@ -239,6 +239,11 @@
       "nome": "manoel",
       "cpf": "105.815.841-47",
       "equipe": "raio"
+    },
+    {
+      "nome": "Ana Julia Sampaio",
+      "cpf": "055.853.573-95",
+      "equipe": "nexus"
     }
   ]
 }
