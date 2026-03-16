@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Iniciando — 595 leads encontrados",
+  "statusText": "Enviando... 1/595",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:33",
   "fim": "",
   "total": 595,
   "nexus": 0,
-  "raio": 0,
+  "raio": 1,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -14,5 +14,11 @@
   "apiWebhook": true,
   "apiSheets": true,
   "apiForms": true,
-  "leads": []
+  "leads": [
+    {
+      "nome": "obede",
+      "cpf": "929.097.283-15",
+      "equipe": "raio"
+    }
+  ]
 }
