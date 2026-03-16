@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 15/596",
+  "statusText": "Enviando... 16/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 8,
-  "raio": 7,
+  "raio": 8,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -89,6 +89,11 @@
       "nome": "jeferson sales silva",
       "cpf": "413.087.458-69",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Geovana Pereira",
+      "cpf": "703.753.181-27",
+      "equipe": "raio"
     }
   ]
 }
