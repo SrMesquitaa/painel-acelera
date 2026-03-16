@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 6/594",
+  "statusText": "Enviando... 7/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 3,
-  "raio": 3,
+  "raio": 4,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -44,6 +44,11 @@
       "nome": "Leonardo",
       "cpf": "172.974.488-50",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Roberta do Nascimento da Silva",
+      "cpf": "029.871.082-06",
+      "equipe": "raio"
     }
   ]
 }
