@@ -1,12 +1,12 @@
 {
-  "status": "stopped",
-  "statusText": "Concluído — 1 enviados | 0 falhas",
+  "status": "running",
+  "statusText": "Iniciando — 594 leads encontrados",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
-  "fim": "09:34",
+  "fim": "",
   "total": 594,
   "nexus": 0,
-  "raio": 1,
+  "raio": 0,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -14,11 +14,5 @@
   "apiWebhook": true,
   "apiSheets": true,
   "apiForms": true,
-  "leads": [
-    {
-      "nome": "Rodrigo",
-      "cpf": "187.099.017-01",
-      "equipe": "raio"
-    }
-  ]
+  "leads": []
 }
