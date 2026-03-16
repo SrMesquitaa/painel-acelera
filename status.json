@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 24/596",
+  "statusText": "Enviando... 25/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 12,
+  "nexus": 13,
   "raio": 12,
   "falhas": 0,
   "ontemNexus": 449,
@@ -134,6 +134,11 @@
       "nome": "LUCAS LIMA DE OLIVEIRA",
       "cpf": "614.371.693-50",
       "equipe": "raio"
+    },
+    {
+      "nome": "Kleberson yuri Tavares Martins",
+      "cpf": "037.491.572-51",
+      "equipe": "nexus"
     }
   ]
 }
