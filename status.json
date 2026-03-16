@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 20/594",
+  "statusText": "Enviando... 21/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 10,
-  "raio": 10,
+  "raio": 11,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -114,6 +114,11 @@
       "nome": "Vivian",
       "cpf": "442.788.178-51",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Paulo Ricardo",
+      "cpf": "027.173.033-16",
+      "equipe": "raio"
     }
   ]
 }
