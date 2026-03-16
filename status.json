@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 2/596",
+  "statusText": "Enviando... 3/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 1,
+  "nexus": 2,
   "raio": 1,
   "falhas": 0,
   "ontemNexus": 449,
@@ -24,6 +24,11 @@
       "nome": "Pedro Henrique Lobato Heidemann",
       "cpf": "122.779.449-55",
       "equipe": "raio"
+    },
+    {
+      "nome": "FABIO",
+      "cpf": "095.881.236-58",
+      "equipe": "nexus"
     }
   ]
 }
