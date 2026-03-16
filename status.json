@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 45/596",
+  "statusText": "Enviando... 46/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 23,
-  "raio": 22,
+  "raio": 23,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -239,6 +239,11 @@
       "nome": "Teresinha",
       "cpf": "357.201.128-04",
       "equipe": "nexus"
+    },
+    {
+      "nome": "JAKSON DOUGLAS DE ANTUNES COSTA",
+      "cpf": "462.943.252-34",
+      "equipe": "raio"
     }
   ]
 }
