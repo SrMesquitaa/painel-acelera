@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 26/596",
+  "statusText": "Enviando... 27/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 13,
+  "nexus": 14,
   "raio": 13,
   "falhas": 0,
   "ontemNexus": 449,
@@ -144,6 +144,11 @@
       "nome": "Giovana",
       "cpf": "522.073.608-65",
       "equipe": "raio"
+    },
+    {
+      "nome": "Diogo xerfan",
+      "cpf": "059.767.052-86",
+      "equipe": "nexus"
     }
   ]
 }
