@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 50/596",
+  "statusText": "Enviando... 51/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 25,
+  "nexus": 26,
   "raio": 25,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Maria Isabelle",
-      "cpf": "074.346.231-95",
-      "equipe": "nexus"
-    },
     {
       "nome": "Pedro Henrique Lobato Heidemann",
       "cpf": "122.779.449-55",
@@ -264,6 +259,11 @@
       "nome": "Elcio Nascimento",
       "cpf": "142.700.338-60",
       "equipe": "raio"
+    },
+    {
+      "nome": "Mariana Camara Bezerra",
+      "cpf": "531.484.668-37",
+      "equipe": "nexus"
     }
   ]
 }
