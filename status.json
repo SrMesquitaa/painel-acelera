@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 55/596",
+  "statusText": "Enviando... 56/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 28,
-  "raio": 27,
+  "raio": 28,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Ronelba Magalhaes dos santos",
-      "cpf": "388.135.132-91",
-      "equipe": "raio"
-    },
     {
       "nome": "Elis",
       "cpf": "607.470.863-03",
@@ -264,6 +259,11 @@
       "nome": "Marcio Luís de Sousa Ávila",
       "cpf": "995.317.714-72",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Lindali Cristine Pedroni",
+      "cpf": "475.776.548-76",
+      "equipe": "raio"
     }
   ]
 }
