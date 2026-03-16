@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 4/596",
+  "statusText": "Enviando... 5/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 2,
+  "nexus": 3,
   "raio": 2,
   "falhas": 0,
   "ontemNexus": 449,
@@ -34,6 +34,11 @@
       "nome": "TIAGO PEREIRA DA COSTA RAMOS",
       "cpf": "086.408.275-40",
       "equipe": "raio"
+    },
+    {
+      "nome": "María Ernestina Lopes Simas Monteiro",
+      "cpf": "336.172.602-68",
+      "equipe": "nexus"
     }
   ]
 }
