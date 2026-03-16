@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 32/594",
+  "statusText": "Enviando... 33/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 16,
-  "raio": 16,
+  "raio": 17,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -174,6 +174,11 @@
       "nome": "62 99810-5777",
       "cpf": "044.594.471-42",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Vitória raissa Santos Vieira",
+      "cpf": "116.273.553-83",
+      "equipe": "raio"
     }
   ]
 }
