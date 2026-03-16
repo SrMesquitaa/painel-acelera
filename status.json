@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 36/596",
+  "statusText": "Enviando... 37/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 18,
+  "nexus": 19,
   "raio": 18,
   "falhas": 0,
   "ontemNexus": 449,
@@ -194,6 +194,11 @@
       "nome": "Amanda",
       "cpf": "047.809.372-13",
       "equipe": "raio"
+    },
+    {
+      "nome": "Davi Pereira Campos",
+      "cpf": "004.538.594-70",
+      "equipe": "nexus"
     }
   ]
 }
