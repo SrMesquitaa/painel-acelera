@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 28/594",
+  "statusText": "Enviando... 29/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 14,
-  "raio": 14,
+  "raio": 15,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -154,6 +154,11 @@
       "nome": "JESICA CARVALHO SALES",
       "cpf": "055.804.703-39",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Matheus Dos Santos Oliveira",
+      "cpf": "074.150.812-50",
+      "equipe": "raio"
     }
   ]
 }
