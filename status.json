@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 60/594",
+  "statusText": "Enviando... 61/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 30,
-  "raio": 30,
+  "raio": 31,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "ANA MARIA PEDROSO",
-      "cpf": "112.419.958-69",
-      "equipe": "raio"
-    },
     {
       "nome": "julia maria barbosa brito lima",
       "cpf": "024.112.401-80",
@@ -264,6 +259,11 @@
       "nome": "Ana Carla Maria de melo",
       "cpf": "024.995.704-31",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Roseane cutrim Everton",
+      "cpf": "736.565.503-87",
+      "equipe": "raio"
     }
   ]
 }
