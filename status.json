@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 6/596",
+  "statusText": "Enviando... 7/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 3,
+  "nexus": 4,
   "raio": 3,
   "falhas": 0,
   "ontemNexus": 449,
@@ -44,6 +44,11 @@
       "nome": "Ronelba Magalhaes dos santos",
       "cpf": "388.135.132-91",
       "equipe": "raio"
+    },
+    {
+      "nome": "Elis",
+      "cpf": "607.470.863-03",
+      "equipe": "nexus"
     }
   ]
 }
