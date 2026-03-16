@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 1/596",
+  "statusText": "Enviando... 2/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 1,
-  "raio": 0,
+  "raio": 1,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -19,6 +19,11 @@
       "nome": "Maria Isabelle",
       "cpf": "074.346.231-95",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Pedro Henrique Lobato Heidemann",
+      "cpf": "122.779.449-55",
+      "equipe": "raio"
     }
   ]
 }
