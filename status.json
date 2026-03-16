@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 57/594",
+  "statusText": "Enviando... 58/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 28,
+  "nexus": 29,
   "raio": 29,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "LUCAS",
-      "cpf": "134.497.714-69",
-      "equipe": "nexus"
-    },
     {
       "nome": "Lindelmira",
       "cpf": "454.622.322-68",
@@ -264,6 +259,11 @@
       "nome": "Alessandra natallia Menezes pisa",
       "cpf": "007.019.402-55",
       "equipe": "raio"
+    },
+    {
+      "nome": "Pedro Fábio Carneiro da Silva",
+      "cpf": "309.426.468-94",
+      "equipe": "nexus"
     }
   ]
 }
