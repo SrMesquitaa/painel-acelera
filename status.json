@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 13/594",
+  "statusText": "Enviando... 14/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 6,
+  "nexus": 7,
   "raio": 7,
   "falhas": 0,
   "ontemNexus": 449,
@@ -79,6 +79,11 @@
       "nome": "Helena",
       "cpf": "441.717.678-73",
       "equipe": "raio"
+    },
+    {
+      "nome": "Mariza",
+      "cpf": "092.051.576-27",
+      "equipe": "nexus"
     }
   ]
 }
