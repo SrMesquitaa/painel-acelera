@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 37/594",
+  "statusText": "Enviando... 38/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 18,
+  "nexus": 19,
   "raio": 19,
   "falhas": 0,
   "ontemNexus": 449,
@@ -199,6 +199,11 @@
       "nome": "Gleidson Cicero",
       "cpf": "327.000.648-95",
       "equipe": "raio"
+    },
+    {
+      "nome": "Ines Cunha santos",
+      "cpf": "293.320.348-00",
+      "equipe": "nexus"
     }
   ]
 }
