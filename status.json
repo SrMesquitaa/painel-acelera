@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 35/594",
+  "statusText": "Enviando... 36/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 17,
+  "nexus": 18,
   "raio": 18,
   "falhas": 0,
   "ontemNexus": 449,
@@ -189,6 +189,11 @@
       "nome": "Aylton Oliveira do Nascimento",
       "cpf": "037.916.582-12",
       "equipe": "raio"
+    },
+    {
+      "nome": "João Gabriel Ferreira da Silva",
+      "cpf": "100.843.163-06",
+      "equipe": "nexus"
     }
   ]
 }
