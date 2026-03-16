@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 24/594",
+  "statusText": "Enviando... 25/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 12,
-  "raio": 12,
+  "raio": 13,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -134,6 +134,11 @@
       "nome": "Brendo",
       "cpf": "076.622.391-44",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Esther Matos",
+      "cpf": "708.852.561-58",
+      "equipe": "raio"
     }
   ]
 }
