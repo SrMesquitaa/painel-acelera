@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 3/594",
+  "statusText": "Enviando... 4/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 1,
+  "nexus": 2,
   "raio": 2,
   "falhas": 0,
   "ontemNexus": 449,
@@ -29,6 +29,11 @@
       "nome": "Yasmin",
       "cpf": "524.481.708-60",
       "equipe": "raio"
+    },
+    {
+      "nome": "PRISCILA DA SILVA NASCIMENTO",
+      "cpf": "810.485.132-20",
+      "equipe": "nexus"
     }
   ]
 }
