@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 5/594",
+  "statusText": "Enviando... 6/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 2,
+  "nexus": 3,
   "raio": 3,
   "falhas": 0,
   "ontemNexus": 449,
@@ -39,6 +39,11 @@
       "nome": "Caio Vinicius Silva Nunes",
       "cpf": "062.166.915-62",
       "equipe": "raio"
+    },
+    {
+      "nome": "Leonardo",
+      "cpf": "172.974.488-50",
+      "equipe": "nexus"
     }
   ]
 }
