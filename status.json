@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 34/594",
+  "statusText": "Enviando... 35/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 17,
-  "raio": 17,
+  "raio": 18,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -184,6 +184,11 @@
       "nome": "Lucivalda Maura Brito",
       "cpf": "251.407.418-57",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Aylton Oliveira do Nascimento",
+      "cpf": "037.916.582-12",
+      "equipe": "raio"
     }
   ]
 }
