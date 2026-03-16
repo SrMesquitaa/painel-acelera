@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 5/596",
+  "statusText": "Enviando... 6/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 3,
-  "raio": 2,
+  "raio": 3,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -39,6 +39,11 @@
       "nome": "María Ernestina Lopes Simas Monteiro",
       "cpf": "336.172.602-68",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Ronelba Magalhaes dos santos",
+      "cpf": "388.135.132-91",
+      "equipe": "raio"
     }
   ]
 }
