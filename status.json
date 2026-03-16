@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 52/596",
+  "statusText": "Enviando... 53/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 26,
+  "nexus": 27,
   "raio": 26,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "FABIO",
-      "cpf": "095.881.236-58",
-      "equipe": "nexus"
-    },
     {
       "nome": "TIAGO PEREIRA DA COSTA RAMOS",
       "cpf": "086.408.275-40",
@@ -264,6 +259,11 @@
       "nome": "JOSE ALVES FREITAS NETO",
       "cpf": "102.971.744-36",
       "equipe": "raio"
+    },
+    {
+      "nome": "Sheila Santos de Sales",
+      "cpf": "550.309.578-20",
+      "equipe": "nexus"
     }
   ]
 }
