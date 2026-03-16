@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 36/594",
+  "statusText": "Enviando... 37/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 18,
-  "raio": 18,
+  "raio": 19,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -194,6 +194,11 @@
       "nome": "João Gabriel Ferreira da Silva",
       "cpf": "100.843.163-06",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Gleidson Cicero",
+      "cpf": "327.000.648-95",
+      "equipe": "raio"
     }
   ]
 }
