@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 56/596",
+  "statusText": "Enviando... 57/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 28,
+  "nexus": 29,
   "raio": 28,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Elis",
-      "cpf": "607.470.863-03",
-      "equipe": "nexus"
-    },
     {
       "nome": "Erica",
       "cpf": "075.603.555-44",
@@ -264,6 +259,11 @@
       "nome": "Lindali Cristine Pedroni",
       "cpf": "475.776.548-76",
       "equipe": "raio"
+    },
+    {
+      "nome": "Júlio",
+      "cpf": "717.068.864-62",
+      "equipe": "nexus"
     }
   ]
 }
