@@ -1,9 +1,9 @@
 {
-  "status": "running",
-  "statusText": "Enviando... 65/596",
+  "status": "stopped",
+  "statusText": "Concluído — 65 enviados | 0 falhas",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
-  "fim": "",
+  "fim": "13:00",
   "total": 596,
   "nexus": 33,
   "raio": 32,
