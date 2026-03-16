@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 29/594",
+  "statusText": "Enviando... 30/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 14,
+  "nexus": 15,
   "raio": 15,
   "falhas": 0,
   "ontemNexus": 449,
@@ -159,6 +159,11 @@
       "nome": "Matheus Dos Santos Oliveira",
       "cpf": "074.150.812-50",
       "equipe": "raio"
+    },
+    {
+      "nome": "Bryan",
+      "cpf": "178.593.437-62",
+      "equipe": "nexus"
     }
   ]
 }
