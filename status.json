@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 55/594",
+  "statusText": "Enviando... 56/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 27,
+  "nexus": 28,
   "raio": 28,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Leonardo",
-      "cpf": "172.974.488-50",
-      "equipe": "nexus"
-    },
     {
       "nome": "Roberta do Nascimento da Silva",
       "cpf": "029.871.082-06",
@@ -264,6 +259,11 @@
       "nome": "priscila",
       "cpf": "068.479.085-80",
       "equipe": "raio"
+    },
+    {
+      "nome": "Erivania Gomes Teixeira",
+      "cpf": "737.997.343-68",
+      "equipe": "nexus"
     }
   ]
 }
