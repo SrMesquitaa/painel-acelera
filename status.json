@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 12/594",
+  "statusText": "Enviando... 13/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 6,
-  "raio": 6,
+  "raio": 7,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -74,6 +74,11 @@
       "nome": "julia maria barbosa brito lima",
       "cpf": "024.112.401-80",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Helena",
+      "cpf": "441.717.678-73",
+      "equipe": "raio"
     }
   ]
 }
