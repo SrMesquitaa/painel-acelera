@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 15/594",
+  "statusText": "Enviando... 16/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 7,
+  "nexus": 8,
   "raio": 8,
   "falhas": 0,
   "ontemNexus": 449,
@@ -89,6 +89,11 @@
       "nome": "Rainara Lohana",
       "cpf": "074.461.863-05",
       "equipe": "raio"
+    },
+    {
+      "nome": "Bruna Rafaela Medeiros de Souza",
+      "cpf": "444.347.278-93",
+      "equipe": "nexus"
     }
   ]
 }
