@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 28/596",
+  "statusText": "Enviando... 29/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 14,
+  "nexus": 15,
   "raio": 14,
   "falhas": 0,
   "ontemNexus": 449,
@@ -154,6 +154,11 @@
       "nome": "PHITER KENNEDY DA SILVA MONTEIRO",
       "cpf": "083.612.832-00",
       "equipe": "raio"
+    },
+    {
+      "nome": "vanderson ferreira da silva",
+      "cpf": "709.012.244-13",
+      "equipe": "nexus"
     }
   ]
 }
