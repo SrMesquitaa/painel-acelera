@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 49/594",
+  "statusText": "Enviando... 50/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 24,
+  "nexus": 25,
   "raio": 25,
   "falhas": 0,
   "ontemNexus": 449,
@@ -259,6 +259,11 @@
       "nome": "Mileine",
       "cpf": "441.410.858-63",
       "equipe": "raio"
+    },
+    {
+      "nome": "Amanda",
+      "cpf": "324.821.568-23",
+      "equipe": "nexus"
     }
   ]
 }
