@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 14/594",
+  "statusText": "Enviando... 15/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 7,
-  "raio": 7,
+  "raio": 8,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -84,6 +84,11 @@
       "nome": "Mariza",
       "cpf": "092.051.576-27",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Rainara Lohana",
+      "cpf": "074.461.863-05",
+      "equipe": "raio"
     }
   ]
 }
