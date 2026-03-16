@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 25/594",
+  "statusText": "Enviando... 26/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
-  "nexus": 12,
+  "nexus": 13,
   "raio": 13,
   "falhas": 0,
   "ontemNexus": 449,
@@ -139,6 +139,11 @@
       "nome": "Esther Matos",
       "cpf": "708.852.561-58",
       "equipe": "raio"
+    },
+    {
+      "nome": "Anderson Narcizo",
+      "cpf": "185.431.248-08",
+      "equipe": "nexus"
     }
   ]
 }
