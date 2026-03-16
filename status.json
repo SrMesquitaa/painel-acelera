@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 42/594",
+  "statusText": "Enviando... 43/594",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "09:34",
   "fim": "",
   "total": 594,
   "nexus": 21,
-  "raio": 21,
+  "raio": 22,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -224,6 +224,11 @@
       "nome": "Gabriela",
       "cpf": "419.535.388-27",
       "equipe": "nexus"
+    },
+    {
+      "nome": "POLLYANA DA SILVA ZOCCOLI",
+      "cpf": "029.423.731-30",
+      "equipe": "raio"
     }
   ]
 }
