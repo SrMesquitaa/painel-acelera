@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 48/596",
+  "statusText": "Enviando... 49/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 24,
+  "nexus": 25,
   "raio": 24,
   "falhas": 0,
   "ontemNexus": 449,
@@ -254,6 +254,11 @@
       "nome": "Ruane",
       "cpf": "093.703.009-02",
       "equipe": "raio"
+    },
+    {
+      "nome": "Jean batista souza",
+      "cpf": "060.754.581-07",
+      "equipe": "nexus"
     }
   ]
 }
