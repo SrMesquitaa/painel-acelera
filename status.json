@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 12/596",
+  "statusText": "Enviando... 13/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 6,
+  "nexus": 7,
   "raio": 6,
   "falhas": 0,
   "ontemNexus": 449,
@@ -74,6 +74,11 @@
       "nome": "Andressa Souza",
       "cpf": "044.705.211-08",
       "equipe": "raio"
+    },
+    {
+      "nome": "Eduardo",
+      "cpf": "057.826.745-47",
+      "equipe": "nexus"
     }
   ]
 }
