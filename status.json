@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 34/596",
+  "statusText": "Enviando... 35/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 17,
+  "nexus": 18,
   "raio": 17,
   "falhas": 0,
   "ontemNexus": 449,
@@ -184,6 +184,11 @@
       "nome": "Sayra",
       "cpf": "074.173.423-02",
       "equipe": "raio"
+    },
+    {
+      "nome": "Moisés Fundador Cardoso da Silva Filho",
+      "cpf": "704.674.191-32",
+      "equipe": "nexus"
     }
   ]
 }
