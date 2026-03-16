@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 32/596",
+  "statusText": "Enviando... 33/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 16,
+  "nexus": 17,
   "raio": 16,
   "falhas": 0,
   "ontemNexus": 449,
@@ -174,6 +174,11 @@
       "nome": "Ana Lucia",
       "cpf": "839.863.672-68",
       "equipe": "raio"
+    },
+    {
+      "nome": "Carla Priscila Pires Toquya",
+      "cpf": "183.552.148-70",
+      "equipe": "nexus"
     }
   ]
 }
