@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 13/596",
+  "statusText": "Enviando... 14/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 7,
-  "raio": 6,
+  "raio": 7,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -79,6 +79,11 @@
       "nome": "Eduardo",
       "cpf": "057.826.745-47",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Fabio Rodrigues Gonçalves",
+      "cpf": "025.790.512-01",
+      "equipe": "raio"
     }
   ]
 }
