@@ -1,12 +1,12 @@
 {
   "status": "running",
-  "statusText": "Enviando... 63/596",
+  "statusText": "Enviando... 64/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
   "nexus": 32,
-  "raio": 31,
+  "raio": 32,
   "falhas": 0,
   "ontemNexus": 449,
   "ontemRaio": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "Fabio Rodrigues Gonçalves",
-      "cpf": "025.790.512-01",
-      "equipe": "raio"
-    },
     {
       "nome": "jeferson sales silva",
       "cpf": "413.087.458-69",
@@ -264,6 +259,11 @@
       "nome": "Amanda",
       "cpf": "061.009.695-80",
       "equipe": "nexus"
+    },
+    {
+      "nome": "Alda Arruda de Albuquerque",
+      "cpf": "399.598.724-91",
+      "equipe": "raio"
     }
   ]
 }
