@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 10/596",
+  "statusText": "Enviando... 11/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 5,
+  "nexus": 6,
   "raio": 5,
   "falhas": 0,
   "ontemNexus": 449,
@@ -64,6 +64,11 @@
       "nome": "Ana cristina ferreira da conceicao",
       "cpf": "051.255.361-05",
       "equipe": "raio"
+    },
+    {
+      "nome": "CARLOS DOS SANTOS",
+      "cpf": "395.127.828-55",
+      "equipe": "nexus"
     }
   ]
 }
