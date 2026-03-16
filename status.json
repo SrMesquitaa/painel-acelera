@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 20/596",
+  "statusText": "Enviando... 21/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 10,
+  "nexus": 11,
   "raio": 10,
   "falhas": 0,
   "ontemNexus": 449,
@@ -114,6 +114,11 @@
       "nome": "Rafaela Chagas Barbosa.",
       "cpf": "052.209.772-37",
       "equipe": "raio"
+    },
+    {
+      "nome": "Ryan Marques",
+      "cpf": "705.957.271-66",
+      "equipe": "nexus"
     }
   ]
 }
