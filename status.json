@@ -1,11 +1,11 @@
 {
   "status": "running",
-  "statusText": "Enviando... 54/596",
+  "statusText": "Enviando... 55/596",
   "dataProcessada": "12/03/2026 a 13/03/2026",
   "inicio": "12:37",
   "fim": "",
   "total": 596,
-  "nexus": 27,
+  "nexus": 28,
   "raio": 27,
   "falhas": 0,
   "ontemNexus": 449,
@@ -15,11 +15,6 @@
   "apiSheets": true,
   "apiForms": true,
   "leads": [
-    {
-      "nome": "María Ernestina Lopes Simas Monteiro",
-      "cpf": "336.172.602-68",
-      "equipe": "nexus"
-    },
     {
       "nome": "Ronelba Magalhaes dos santos",
       "cpf": "388.135.132-91",
@@ -264,6 +259,11 @@
       "nome": "Kilza Pereira",
       "cpf": "034.915.122-98",
       "equipe": "raio"
+    },
+    {
+      "nome": "Marcio Luís de Sousa Ávila",
+      "cpf": "995.317.714-72",
+      "equipe": "nexus"
     }
   ]
 }
